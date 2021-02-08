@@ -1,6 +1,8 @@
-SECTION .text
+global _ft_strlen
 
-.ft_strlen :
+section .text
+
+_ft_strlen :
 	push rbp
 	mov rsp, rbp
 	xor r13, r13

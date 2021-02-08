@@ -15,7 +15,7 @@ typedef struct		s_list
 
 int					ft_strcmp(const char *str, const char *str2);
 char				*ft_strcpy(char *str, const char *str2);
-size_t				ft_strlen(const char *str);
+extern size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);
 ssize_t				ft_write(int fd, const void *str, size_t len);
 ssize_t				ft_read(int fd, void *buf, size_t count);
