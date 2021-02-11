@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
-extern unsigned int ft_strlen(const char *str);
+extern int ft_strcmp(char *, char *);
 
 int main(void)
 {
-	dprintf(1, "%d\n", ft_strlen("testpd"));
+	dprintf(1, "mine :%d\n", ft_strcmp("testpd", "tesl"));
+	dprintf(1, "not  :%d\n", strcmp("testpd", "tesl"));
 	return (0);
 }
