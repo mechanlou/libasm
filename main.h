@@ -5,6 +5,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <sys/errno.h>
 # include <fcntl.h>
 
 typedef struct		s_list
@@ -13,7 +14,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int					ft_strcmp(const char *str, const char *str2);
+signed int					ft_strcmp(const char *str, const char *str2);
 char				*ft_strcpy(char *str, const char *str2);
 extern size_t				ft_strlen(const char *str);
 char				*ft_strdup(const char *str);

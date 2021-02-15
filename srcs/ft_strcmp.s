@@ -3,6 +3,7 @@ global _ft_strcmp
 section .text
 
 _ft_strcmp:
+	push rbx
 	push rcx
 	push r12
 	xor rcx, rcx
@@ -19,9 +20,11 @@ _ft_strcmp:
 	jmp .loop
 
 .exit:
-	mov al, byte [rdi + rcx]
-	sub al, byte [rsi + rcx]
+	movzx rax, byte [rdi + rcx]
+	movzx rbx, byte [rsi + rcx]
+	sub rax, rbx
 	pop r12
 	pop rcx
+	pop rbx
 	ret
 	
