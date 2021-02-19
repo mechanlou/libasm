@@ -7,15 +7,15 @@ _ft_strcpy:
 	xor r11, r11
 
 .loop:
-	cmp byte [rdi + r11], 0
+	cmp byte [rsi + r11], 0
 	je .exit
-	mov ax, [rdi + r11]
-	mov [rsi + r11], ax
+	mov ax, [rsi + r11]
+	mov [rdi + r11], ax
 	inc r11
 	jmp .loop
 
 .exit:
-	mov byte [rsi + r11], 0
+	mov byte [rdi + r11], 0
 	pop r11
-	mov rax, rsi
+	mov rax, rdi
 	ret

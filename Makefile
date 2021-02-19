@@ -6,7 +6,7 @@
 #    By: rkowalsk <rkowalsk@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 14:55:32 by rkowalsk          #+#    #+#              #
-#    Updated: 2021/02/12 12:14:13 by rkowalsk         ###   ########lyon.fr    #
+#    Updated: 2021/02/17 14:32:59 by rkowalsk         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,16 @@ NAME = libasm.a
 SRCS =	srcs/ft_strlen.s \
 		srcs/ft_strcpy.s \
 		srcs/ft_strcmp.s \
-		srcs/ft_write.s
+		srcs/ft_write.s \
+		srcs/ft_strdup.s \
+		srcs/ft_read.s
 OBJS = ${SRCS:.s=.o}
 
 %.o: %.s
 	nasm -f macho64 $< -o $@
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rc -lc $(NAME) $(OBJS)
 
 .PHONY: all clean fclean re
 

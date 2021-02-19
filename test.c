@@ -5,7 +5,13 @@
 
 int main(void)
 {
-	dprintf(1, "%zd\n", ft_write(133, "test\n", 5));
+	char *str;
+	char truc[] = "fgdsgrdz";
+	dprintf(1, "%zu\n", ft_strlen(truc));
+	str = ft_strdup(truc);
+	dprintf(1 ,"%s\n", str); 
+	// str = malloc(sizeof(char) * (ft_strlen("pute") + 1));
+	// ft_strcpy(str, "pute");
 	perror(NULL);
 	return (0);
 }
